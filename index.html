@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            /*styles the entire web to my specifications above*/
+
+        }
+        .code {
+                background-color: #2d2d2d;
+                padding: 10px;
+                border-radius: 5px;
+                font-family: 'Courier New', Courier, monospace;
+                color: #eee;
+                display: block;
+                width: fit-content;
+                margin-top: 10px;
+                /*writing a command or code*/
+            }
+            .content{
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 2px;
+                text-align: justify;
+                /*aligns and justifies the blog to the center*/
+
+            }
+            h1{
+                color: orangered;
+            }
+            strong, b{
+                font-size: 1.2em;
+                font-weight: bold;
+                /*increases the size of every bold text*/
+            }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <H1>MASTERING GIT</H1>
+    <H2>What is Git</H2>
+    <p>Git is a distributed version control system used to track changes in source code during software development. It <br>helps developers collaborate on projects by allowing them to work on the same codebase without overwriting each other’s work.</p>
+    <H3>Features</H3>
+<ol><li>Distributed Version Control System: Git isn’t just a regular version control system it’s distributed. Each developer has their own complete copy of the project’s history (called a repository). Unlike traditional systems, where you rely on a central server, Git lets you work independently, even offline.</li>
+<li>Collaboration and Code Harmony: Git enables seamless collaboration. Developers can clone repositories, work on their changes, and then sync them back to the shared repository.</li>
+<li>Branching and Merging: Developers can create branches to work on new features or fixes independently, then merge these changes back into the main codebase.</li>
+<li>Staging and Committing: Changes are first added to a staging area, where they can be reviewed before being committed (saved) to the project history.</li>
+</ol>
+<h2>About Git</h2>
+<p>Git was created by Linus Torvalds, the same person who created the Linux operating system. He developed Git in 2005 to address a problem he was facing while managing the Linux kernel development.</p>
+<h2>Installing Git</h2>
+<h3>On Windows</h3>
+<ol><p><li><B>Download Git for Windows:</B> Go to the <a href="https://git-scm.com/download/win" target="-blank">Official Git Website</a> and download the installer for Windows.</li></p>
+    <p><li><b>Run the Installer:</b> Once the download completes, open the .exe file and start the installation process. Follow the default settings in the setup wizard unless you have specific needs.</li></p>
+    <p><li><b>Configure Git:</b> After installation, open Git Bash (installed alongside Git) and run the following commands to configure your name and email.</li></p>
+    <img src="./images/cmd1.jpg" width="700px"/>  <p><img src="./images/cmd2.jpg" width="700px"></p>
+    <p><LI><B>Verify Installation: </B>Open Git Bash or Command Prompt and type: git --version If Git is installed correctly, this command will display the installed version number.</LI></p>
+    <div class="code">git --version</div><p>
+</ol>
+<h3>Git on macOS</h3></p>
+<ol><p><li><b>Use Homebrew (Recommended):</b> If you have Homebrew installed, open the Terminal and run: </li></p>
+    <div class="code">brew install git</div>
+    <p><li><b>Manual Installation:</b> Alternatively, you can download Git from <a href="https://git-scm.com/download/win" target="_blank">git-scm.com.</a> After downloading the .dmg file, follow the instructions to install Git.</li></p>
+<p><li><b>Configure Git:</b> Run these commands in your terminal to set your user name and email: </li></p>
+    <div class="code">git config --global user.name "Your Name" <p>git config --global user.email "your.email@example.com"</p></div>
+    <p><li><b>Verify Installation:</b> Run: It will show the version of Git installed if everything is set up correctly.</li></p>
+    <div class="code">git --version</div><p>
+    </ol>
+    <h3>Installing Git on Linux</h3></p>
+    <ol><li><b>Ubuntu/Debian:</b> Open your terminal and run: </li>
+        <div class="code">sudo apt update sudo apt install git</div><p>
+        <li><b>Fedora:</b> Run: </li></p>
+        <div class="code" >sudo dnf install git</div><p>
+        <li><b>Arch Linux:</b> Run: </li></p>
+        <div class="code">sudo pacman -S git</div><p>
+        <li><b>Configure Git: </b>Set your user name and email: user.name "Your Name" </li></p>
+        <div class="code">git config --global user.email "your.email@example.com"</div><p>
+        <li><b>Verify Installation: </b>Run: You should see the version number of Git installed.</li></p>
+        <div class="code">git --version</div>
+</ol>
+<p><h2>Initializing a Git repository</h2></p>
+<ol><li><b>Open your terminal or command prompt:</b> <p>Windows: Open Git Bash or Command Prompt.</p> <p>macOS/Linux: Open your Terminal.</p></li>
+    <p><li><b>Navigate to your project folder:</b> Use the cd (change directory) command to navigate to the directory where you want to initialize the repository.</li></p>
+    <div class="code">cd /path/to/your/project</div><p>
+    <p>For example:</p><p>
+        <div class="code">cd /Users/yourusername/Documents/myproject
+        </div>
+    </p>
+    <p><li><b>Initialize the Git repository:</b> Once you're inside the folder, run the following command to initialize an empty Git repository:</li></p>
+    <div class="code">git init</div>
+    <p><li><b>Start Tracking Files:</b> Now that the Git repository is initialized, you can start adding files to the repository, Check the status of your repository:</p>
+    <div class="code">git status</div>
+    <p>This will show you which files are untracked (files that Git is not currently tracking). </p><p>Add files to the staging area: To add all files in your project directory to Git: 
+        <div class="code">git add .</div>
+    </p>
+    <p>Or, to add specific files:</p> <div class="code">git add filename.ext</div>
+    <p>Make your first commit: After staging the files, you can create your first commit:</p> <div class="code">git commit -m "Initial commit"</div>
+    <p><b>Writing Good Commit Messages:</b></p>
+       
+        <p>A good commit message is important for understanding the history of your project. Follow these guidelines:</p>
+        <ul><li>Start with a short (50 characters or less) summary of what was changed.</li>
+        <li>Leave a blank line between the summary and detailed description.</li>
+        <li>Use the imperative mood (e.g., “Add feature” instead of “Added feature”).</li>
+        <li>Provide a detailed explanation of why changes were made, especially for complex commits.</li></ul>
+
+</li>
+<p><b>After initialization:</b></p>
+    <p>Your project is now a Git repository, and you can start using Git commands to track changes, create branches, and collaborate with others. If you need to connect this local repository to a remote repository (such as on GitHub, GitLab, or Bitbucket), you can do so by running:</p>
+    <div class="code">git remote add origin https://github.com/yourusername/your-repo.git <p>git push -u origin master</p>
+        </div>
+        <p><b>Viewing Past Commits:</b></p>
+        <p>To view the history of past commits, use:</p>
+        <div class="code">git log</div> <p>This command will display all previous commits along with their messages and metadata (author, date, etc.).</p>
+        <b>Reverting to a Previous Commit:</b>
+        <p>To go back to a specific commit, you can use the following command:</p>
+        <div class="code">git checkout <commit-hash></div>
+            <p>Replace <commit-hash> with the commit ID you want to go back to. To return to the latest commit (the HEAD), use:</p>
+                <div class="code">git checkout master</div>
+    <h2>Branches in Git</h2>
+    <p>Branches in Git are used to develop features, bug fixes, or experiments isolated from the main codebase (typically the master or main branch). They are important because they allow multiple developers to work on different parts of a project simultaneously without interfering with each other's work.</p>
+    <b>Why Branches Are Important:</b>
+    <ul><li>Parallel Development: Developers can work on different features in separate branches.</li>
+        <li>Code Safety: Changes can be tested in isolation before merging them into the main branch.</li>
+        <li>Collaboration: Different team members can work on various tasks without overwriting each other’s work.</li></ul><P>
+    <b>Creating a Branch</b></P>
+    <p>To create a new branch in Git, use the following command:</p> <div class="code">git branch new-branch-name</div>
+        <p>To switch to the new branch right after creating it, use:</p> <div class="code">git checkout -b new-branch-name</div>
+        <p><b>Viewing All Branches</b></p>
+        <p>To view all the branches in your repository, use the following command: <div class="code">git branch</div></p>
+        The active branch will have an asterisk (*) next to it.
+        <p><b>Switching Active Branches</b></p>
+        <p>To switch between branches, use: <div class="code">git checkout branch-name</div></p>
+        For example, to switch to a branch named feature-branch:
+        <div class="code">git checkout feature-branch</div>
+        <p><b>Merging a Branch</b></p>
+        <p>To merge a branch into the current branch, use the following command:</p> <div class="code">git merge branch-name</div>
+        <p>For example, if you are on the master branch and you want to merge feature-branch into it:</p>
+        <div class="code"><p>git checkout master</p><p></p>git merge feature-branch</p></div>
+        <p><b>Deleting a Branch</b></p> <p>After merging a branch, you may want to delete it. To delete a branch, use:</p>
+        <p>
+        <div class="code">git branch -d branch-name</div></p>
+        If the branch hasn't been merged yet and you still want to delete it, use: <p>
+        <div class="code">git branch -D branch-name</div></p>
+    <p><i><b>Learn about <a href="https://git-scm.com/book/en/v2" target="_blank">GitHub</b></a>: <p>GitHub is a hosting service for Git repositories, where you can collaborate with others.</p><p>
+        Explore pull requests: A pull request is a way to propose changes to a repository on GitHub.</p>
+        <p>Study rebase: Rebasing is an advanced Git feature for integrating changes from one branch into another without creating a merge commit.</p></i></p>
+    </ol>
+</div>
+</body>
+</html>
