@@ -66,7 +66,7 @@
     <img src="./images/cmd1.jpg" width="700px"/>  <p><img src="./images/cmd2.jpg" width="700px"></p>
     <p><LI><B>Verify Installation: </B>Open Git Bash or Command Prompt and type: git --version If Git is installed correctly, this command will display the installed version number.</LI></p>
     <div class="code">git --version</div><p>
-        <img src="./images/cmd3.jpg" width="700px"/>
+        <img src="./images/cmd3.jpg" width="700px"/></p><p>
 </ol>
 <h3>Git on macOS</h3></p>
 <ol><p><li><b>Use Homebrew (Recommended):</b> If you have Homebrew installed, open the Terminal and run: </li></p>
@@ -98,14 +98,17 @@
         </div>
     </p>
     <p><li><b>Initialize the Git repository:</b> Once you're inside the folder, run the following command to initialize an empty Git repository:</li></p>
-    <div class="code">git init</div>
+    <div class="code">git init</div><p>
+    <img src="./images/init.jpg" width="700px"/></p>
     <p><li><b>Start Tracking Files:</b> Now that the Git repository is initialized, you can start adding files to the repository, Check the status of your repository:</p>
-    <div class="code">git status</div>
+    <div class="code">git status</div><p>
+    <img src="./images/status.jpg" width="700px"/></p>
     <p>This will show you which files are untracked (files that Git is not currently tracking). </p><p>Add files to the staging area: To add all files in your project directory to Git: 
         <div class="code">git add .</div>
     </p>
     <p>Or, to add specific files:</p> <div class="code">git add filename.ext</div>
-    <p>Make your first commit: After staging the files, you can create your first commit:</p> <div class="code">git commit -m "Initial commit"</div>
+    <p>Make your first commit: After staging the files, you can create your first commit:</p> <div class="code">git commit -m "Initial commit"</div><p>
+    <img src="./images/first commit.jpg" width="700px"/></p>
     <p><b>Writing Good Commit Messages:</b></p>
        
         <p>A good commit message is important for understanding the history of your project. Follow these guidelines:</p>
@@ -119,6 +122,7 @@
     <p>Your project is now a Git repository, and you can start using Git commands to track changes, create branches, and collaborate with others. If you need to connect this local repository to a remote repository (such as on GitHub, GitLab, or Bitbucket), you can do so by running:</p>
     <div class="code">git remote add origin https://github.com/yourusername/your-repo.git <p>git push -u origin master</p>
         </div>
+        <p><img src="./images/remote.jpg" width="700px"/></p>
         <p><b>Viewing Past Commits:</b></p>
         <p>To view the history of past commits, use:</p>
         <div class="code">git log</div> <p>This command will display all previous commits along with their messages and metadata (author, date, etc.).</p>
@@ -133,11 +137,12 @@
     <ul><li>Parallel Development: Developers can work on different features in separate branches.</li>
         <li>Code Safety: Changes can be tested in isolation before merging them into the main branch.</li>
         <li>Collaboration: Different team members can work on various tasks without overwriting each other’s work.</li></ul><P>
-    <b>Creating a Branch</b></P>6
+    <b>Creating a Branch</b></P>
     <p>To create a new branch in Git, use the following command:</p> <div class="code">git branch new-branch-name</div>
         <p>To switch to the new branch right after creating it, use:</p> <div class="code">git checkout -b new-branch-name</div>
         <p><b>Viewing All Branches</b></p>
         <p>To view all the branches in your repository, use the following command: <div class="code">git branch</div></p>
+        <p><img src="./images/brancg.jpg" width="700px"/></p>
         The active branch will have an asterisk (*) next to it.
         <p><b>Switching Active Branches</b></p>
         <p>To switch between branches, use: <div class="code">git checkout branch-name</div></p>
